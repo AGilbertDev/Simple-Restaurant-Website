@@ -1,0 +1,133 @@
+/* Variables */
+:root {
+}
+
+/* Minimal CSS Reset */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+/* Fonts */
+body {
+    font-family: 'Arial', Helvetica, sans-serif;
+}
+
+/* Page layout */
+nav {
+    grid-area: nav;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 30%;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        li {
+        
+            margin-right: 15px;
+
+            &:nth-last-child(1) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+  
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: header;
+    background-color: black;
+    color: white;
+
+    .hero-text {
+        height: 100%;
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .text {
+            width: 50%;
+            text-align: left;
+        }
+    }
+
+    .hero-img {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 60%;
+        text-align: center;
+        overflow: hidden;
+
+        img {
+            width: max-content;
+        }
+    }
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+    padding: 15px;
+    background-color: orange;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas: 
+        "nav"
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: min-content 80vh auto min-content;
+    min-height: 100vh;
+}
