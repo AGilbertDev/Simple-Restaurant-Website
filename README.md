@@ -1,2 +1,2 @@
 # basic-restaurant
-A basic restaurant ordering website using vanilla javascript.
+A basic restaurant website using vanilla javascript.
