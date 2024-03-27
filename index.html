@@ -6,13 +6,14 @@
     <title>Restaurant</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body onload="makeList()">
     <div class="wrapper">
         <nav>
             <div class="logo">
                 <p><a href="index.html">LOGO</a></p>
             </div>
             <ul>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
@@ -22,19 +23,31 @@
         <header>
             <div class="hero-text">
                 <div class="text">
-                    <h1>We make okay food</h1>
+                    <h1>Delicious food delivered fast</h1>
                     <p>
-                        Enjoy some cheap food that's not bad but not great either.
+                        Enjoy a tasty meal from the comfort of your home.
                     </p>
-                    <button>Order Now</button>
+                    <button>Order now</button>
                 </div>
             </div>
             <div class="hero-img">
-                <img src="images/hero.png" alt="fish plate">
+                <!-- <img src="images/hero.png"> -->
             </div>
         </header>
         <main>        
-            <div class="menu"></div>
+            <div class="menu">
+                <h1>Menu</h1>
+                <h2>Starters</h2>
+                <div id="starters" class="food-items starters"><!-- Items added with javascript--></div>
+                <h2>Main Course</h2>
+                <div id="mains" class="food-items mains"><!-- Items added with javascript--></div>
+                <h2>Sides</h2>
+                <div id="sides" class="food-items sides"><!-- Items added with javascript--></div>
+                <h2>Desserts</h2>
+                <div id="desserts" class="food-items desserts"><!-- Items added with javascript--></div>
+                <h2>Drinks</h2>
+                <div id="drinks" class="food-items drinks"><!-- Items added with javascript--></div>
+            </div>
             <div class="about"></div>
             <div class="contact"></div>
         </main>

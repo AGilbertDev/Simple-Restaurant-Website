@@ -64,19 +64,21 @@ header {
   justify-content: space-around;
   align-items: center;
   grid-area: header;
-  background-color: black;
+  background-image: url("../images/header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-color: linear-gradient(to right, rgb(255, 145, 0), black 60%);
   color: white;
 }
 header .hero-text {
   height: 100%;
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 header .hero-text .text {
-  width: 50%;
   text-align: left;
 }
 header .hero-img {
@@ -85,23 +87,67 @@ header .hero-img {
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 60%;
+  width: 50%;
   text-align: center;
   overflow: hidden;
 }
 header .hero-img img {
-  width: -moz-max-content;
-  width: max-content;
+  position: relative;
+  top: 50px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   grid-area: main;
+  align-items: center;
+}
+
+.menu {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu h2 {
+  margin-top: 50px;
+}
+.menu .food-items {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.menu .food-items .food-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 370px;
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.25);
+}
+.menu .food-items .food-item .btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.menu .food-items .food-item img {
+  height: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px 12px 0 0;
 }
 
 footer {
   grid-area: footer;
   padding: 15px;
-  background-color: orange;
+  background-color: black;
   color: white;
   display: flex;
   flex-direction: row;
